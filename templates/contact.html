@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | CINO Bakery & Confectionary</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fffaf3;
+      color: #333;
+    }
+
+    /* NAVBAR */
+    nav {
+      background: #d35400;
+      color: white;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav h1 {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+    }
+    nav ul li a:hover {
+      text-decoration: wavy;
+    }
+
+    /* CONTACT SECTION */
+    .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 60px 40px;
+      background: #ffeccc;
+      gap: 50px;
+    }
+    .contact-info {
+      flex: 1;
+      min-width: 300px;
+    }
+    .contact-info h2 {
+      color: #d35400;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .contact-info p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #555;
+    }
+    .contact-info i {
+      color: #d35400;
+      margin-right: 10px;
+    }
+
+    /* FORM */
+    .contact-form {
+      flex: 1;
+      min-width: 300px;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .contact-form h3 {
+      color: #d35400;
+      margin-bottom: 15px;
+    }
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .contact-form input, .contact-form textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: inherit;
+      outline: none;
+    }
+    .contact-form textarea {
+      resize: none;
+      height: 120px;
+    }
+    .contact-form button {
+      background: #d35400;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .contact-form button:hover {
+      background: #e69500;
+    }
+
+    /* MAP */
+    .map {
+      padding: 50px 20px;
+      text-align: center;
+      background: #fffaf0;
+    }
+    .map iframe {
+      width: 90%;
+      height: 350px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <h1>CINO BAKERY</h1>
+    <ul>
+      <li><a href="/">HOME</a></li>
+      <li><a href="/products">PRODUCTS</a></li>
+      <li><a href="/about">ABOUT</a></li>
+      <li><a href="/contact">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <div class="contact-info">
+      <h2>Get In Touch</h2>
+      <p><i class="fa-solid fa-location-dot"></i> No. 18 Dogon Bauchi Road, Sabon Gari, Zaria Kaduna State.</p>
+      <p><i class="fa-solid fa-phone"></i> 08032600887</p>
+      <p><i class="fa-solid fa-envelope"></i> cinofoods@gmail.com</p>
+      <p>We’d love to hear from you! Whether it’s feedback, custom orders, or wholesale inquiries — reach out and our friendly team will respond shortly.</p>
+    </div>
+
+    <div class="contact-form">
+      <h3>Send Us a Message</h3>
+      <form action="/send_message" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="map">
+    <h3>Find Us Here</h3>
+    <iframe 
+      src="https://www.google.com/maps?q=Sabon+Gari+Main+Market,+Zaria&output=embed" 
+      allowfullscreen>
+    </iframe>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 CINO Bakery & Confectionary | All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | CINO Bakery & Confectionary</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fffaf3;
+      color: #333;
+    }
+
+    /* NAVBAR */
+    nav {
+      background: #d35400;
+      color: white;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav h1 {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+    }
+    nav ul li a:hover {
+      text-decoration: wavy;
+    }
+
+    /* ABOUT SECTION */
+    .about-section {
+      padding: 60px 40px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 50px;
+      background: #ffeccc;
+    }
+    .about-image {
+      flex: 1;
+      text-align: center;
+    }
+    .about-image img {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .about-text {
+      flex: 1;
+    }
+    .about-text h2 {
+      color: #d35400;
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+    }
+    .about-text p {
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .about-text strong {
+      color: #333;
+    }
+
+    /* MISSION & VISION */
+    .mission {
+      background: #fffaf0;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .mission h3 {
+      color: #d35400;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+    .mission p {
+      max-width: 800px;
+      margin: 0 auto 30px;
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <h1>CINO BAKERY</h1>
+    <ul>
+      <li><a href="/">HOME</a></li>
+      <li><a href="/products">PRODUCTS</a></li>
+      <li><a href="/about">ABOUT</a></li>
+      <li><a href="/contact">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-section">
+    <div class="about-image">
+      <img src="/static/images/wanzan.jpg" alt="CINO Bakery Team">
+    </div>
+    <div class="about-text">
+      <h2>Our Story</h2>
+      <p>
+        <strong>CINO Bakery & Confectionary</strong> was founded with one simple goal — to bring smiles to every home through fresh, warm, and delicious baked goods. 
+        From our humble beginnings in <strong>Zaria</strong>, we’ve grown into a trusted local favorite for families, students, and bread lovers.
+      </p>
+      <p>
+        Every loaf we bake and every snack we make is crafted with passion, using quality ingredients and time-tested recipes.
+        We pride ourselves on combining traditional baking techniques with modern innovation to create irresistible tastes.
+      </p>
+    </div>
+  </section>
+
+  <!-- MISSION AND VISION -->
+  <section class="mission">
+    <h3>Our Mission</h3>
+    <p>To deliver fresh, healthy, and affordable baked goods that make every customer’s day a little sweeter.</p>
+
+    <h3>Our Vision</h3>
+    <p>To become the most loved bakery in Nigeria, known for quality, consistency, and community connection.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 CINO Bakery & Confectionary | All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

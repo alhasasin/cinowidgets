@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINO Bakery and Confectionary</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background-color: #fffaf5;
+        }
+        header {
+            background-color: #d35400;
+            color: white;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            font-size: 1.8em;
+        }
+        nav {
+            background: #d35400;
+            color: white;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav h1 {
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav a:hover {
+            text-decoration: wavy;
+        }
+        .hero {
+            background: url("{{ url_for('static', filename='images/logo.png') }}") no-repeat center/cover;
+            height: 80vh;
+            color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .hero h2 {
+            font-size: 3em;
+            background-color: rgba(0,0,0,0.5);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        .section {
+            padding: 60px 10%;
+            text-align: center;
+        }
+        .products {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            width: 250px;
+            padding: 20px;
+        }
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+            height: 180px;
+            object-fit: cover;
+        }
+        .product-card h3 {
+            margin: 10px 0 5px;
+            color: #d2691e;
+        }
+        footer {
+            background-color: #2c2c2c;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        /* Chatbot Widget */
+        .chat-icon {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #d35400;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 28px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .chat-box {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 320px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            display: none;
+            flex-direction: column;
+        }
+        .chat-header {
+            background-color: #d2691e;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+        }
+        .chat-messages {
+            height: 300px;
+            overflow-y: auto;
+            padding: 10px;
+        }
+        .chat-input {
+            display: flex;
+            border-top: 1px solid #ddd;
+        }
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+        }
+        .chat-input button {
+            background-color: #d2691e;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>CINO Bakery & Confectionary</h1>
+        <nav>
+            <a href="/">HOME</a>
+            <a href="/products">PRODUCTS</a>
+            <a href="/about">ABOUT</a>
+            <a href="/contact">CONTACT</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Freshly Baked Everyday 🍞</h2>
+        <p>Delicious breads, cakes, and snacks made with love.</p>
+    </section>
+
+    <section class="section" id="products">
+        <h2>Our Best Sellers</h2>
+        <div class="products">
+            <div class="product-card">
+                <img src="static/images/bread4.png" alt="Bread">
+                <h3>Soft Loaf Bread</h3>
+                <p>Available in Small, Medium & Large sizes.</p>
+            </div>
+            <div class="product-card">
+                <img src="{{ url_for('static', filename='images/curry.png') }}" alt="pro">
+                <h3>Meat Pie</h3>
+                <p>Golden crust, spicy meat filling — a customer favorite!</p>
+            </div>
+            <div class="product-card">
+                <img src="{{ url_for('static', filename='images/fried_rice.png') }}" alt="pro">
+                <h3>Doughnut</h3>
+                <p>Soft, sweet, and perfect for your morning tea!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <h2>About Us</h2>
+        <p>At <strong>CINO Bakery & Confectionary</strong>, we pride ourselves on baking fresh, high-quality breads and snacks daily.
+        Our mission is to bring warmth and sweetness to every home in Zaria through our delicious bakery products.</p>
+    </section>
+
+    <section class="section" id="contact">
+        <h2>Contact Us</h2>
+        <p>📍 Location: NO. 18 Dogon Bauchi Road, Sabon Gari, Zaria</p>
+        <p>📞 Phone: 08032600887</p>
+        <p>📧 Email: cinofoods@gmail.com</p>
+    </section>
+
+    <footer>
+        <p>© 2025 CINO Bakery & Confectionary | Freshness You Can Taste</p>
+    </footer>
+
+    <!-- Chatbot Button -->
+    <button class="chat-icon" onclick="toggleChat()">💬</button>
+
+    <!-- Chatbox -->
+    <div class="chat-box" id="chatBox">
+        <div class="chat-header">CINO Bakery Chatbot</div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Ask me anything..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleChat() {
+            const box = document.getElementById("chatBox");
+            box.style.display = box.style.display === "flex" ? "none" : "flex";
+        }
+
+        async function sendMessage() {
+            const input = document.getElementById("userInput");
+            const messages = document.getElementById("chatMessages");
+            const userMessage = input.value.trim();
+            if (!userMessage) return;
+
+            messages.innerHTML += `<div><strong>You:</strong> ${userMessage}</div>`;
+            input.value = "";
+
+            const response = await fetch("/get", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ message: userMessage })
+            });
+            const data = await response.json();
+            messages.innerHTML += `<div><strong>CINO Bot:</strong> ${data.response}</div>`;
+            messages.scrollTop = messages.scrollHeight;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Products | CINO Bakery & Confectionary</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fffaf3;
+      color: #333;
+    }
+
+    /* NAVBAR */
+    nav {
+      background: #d35400;
+      color: white;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav h1 {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+    }
+    nav ul li a:hover {
+      text-decoration: wavy;
+    }
+
+    /* HEADER */
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
+      background: #ffeccc;
+    }
+    header h2 {
+      font-size: 2.2rem;
+      color: #d35400;
+      margin-bottom: 10px;
+    }
+    header p {
+      color: #555;
+      font-size: 1.1rem;
+    }
+
+    /* PRODUCTS GRID */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 50px;
+    }
+    .product {
+      background: #fffaf0;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.3s;
+    }
+    .product:hover {
+      transform: translateY(-5px);
+    }
+    .product img {
+      width: 100%;
+      border-radius: 12px;
+      height: 200px;
+      object-fit: cover;
+    }
+    .product h3 {
+      margin: 10px 0;
+      color: #333;
+    }
+    .product p {
+      color: #777;
+      font-size: 0.9rem;
+    }
+    .product span {
+      display: block;
+      margin-top: 8px;
+      font-weight: bold;
+      color: #d35400;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <h1>CINO BAKERY</h1>
+    <ul>
+      <li><a href="/">HOME</a></li>
+      <li><a href="/products">PRODUCTS</a></li>
+      <li><a href="/about">ABOUT</a></li>
+      <li><a href="/contact">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <header>
+    <h2>Our Delicious Products</h2>
+    <p>Freshly baked daily with love — choose your favorite size and flavor.</p>
+  </header>
+
+  <!-- PRODUCT GRID -->
+  <section class="product-grid">
+    <div class="product">
+      <img src="/static/images/bread1.png" alt="Soft Bread">
+      <h3>Soft Bread (large)</h3>
+      <p>Light, fluffy, and baked to perfection.</p>
+      <span>₦950 - ₦1000</span>
+    </div>
+
+    <div class="product">
+      <img src="/static/images/bread2.png" alt="Whole Wheat Bread">
+      <h3>Small Bread</h3>
+      <p>Rich in fiber and perfect for healthy living.</p>
+      <span>₦270 - ₦300</span>
+    </div>
+
+    <div class="product">
+      <img src="/static/images/bread3.png" alt="Meat Pie">
+      <h3>Soft Bread (Jumbo)</h3>
+      <p>Golden crust with savory minced meat filling.</p>
+      <span>₦1400 - ₦1500</span>
+    </div>
+    <div class="product">
+      <img src="/static/images/bread4.png" alt="Doughnut">
+      <h3>Economic Pack</h3>
+      <p>Soft, sugary, and perfect for every occasion.</p>
+      <span>₦2000 - ₦2500</span>
+    </div>
+
+    <div class="product">
+      <img src="/static/images/curry.png" alt="curry">
+      <h3>Curry Powder</h3>
+      <p>Delicious Spices for Family at the heart.</p>
+      <span>₦500</span>
+    </div>
+
+    <div class="product">
+      <img src="/static/images/thyme.png" alt="thyme">
+      <h3>Thyme Powder</h3>
+      <p>Which can help fight acne, improve heart health, and support the immune system.</p>
+      <span>₦500</span>
+    </div>
+    <div class="product">
+      <img src="/static/images/fried_rice.png" alt="fried rice">
+      <h3>Fried Rice</h3>
+      <p>Enhanced flavor and aroma and providing health benefits.</p>
+      <span>₦400</span>
+    </div>
+
+    <div class="product">
+      <img src="/static/images/jallof_rice.png" alt="Muffin">
+      <h3>Jollof</h3>
+      <p>which help fight oxidative stress and chronic diseases.</p>
+      <span>₦300</span>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 CINO Bakery & Confectionary | All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
