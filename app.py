@@ -58,7 +58,7 @@ def chatbot_response():
     elif any(word in user_message for word in breads):
         reply = random.choice([
             "We bake fresh loaves every morning — small, medium, and large sizes 🍞.",
-            "Our bread is soft and fresh! Available in small (₦300), medium (₦500), and large (₦800).",
+            "Our bread is soft and fresh! Available in small (₦300), medium (₦600), large (₦1000) and jumbo (₦1500) sizes.",
             "You’ll love our golden-brown bread — it’s our customer favorite!"
         ])
 
@@ -71,23 +71,23 @@ def chatbot_response():
 
     elif any(word in user_message for word in price):
         reply = random.choice([
-            "Our bread prices: Small ₦300, Medium ₦500, Large ₦800.",
+            "Our bread prices: Small ₦300, Medium ₦600, Large ₦1000, Jumbo ₦1500.",
             "Snacks like meat pie and doughnut go for ₦400 each.",
             "All our prices are friendly and worth the taste! 😍"
         ])
 
     elif any(word in user_message for word in location):
         reply = random.choice([
-            "📍 We’re located at Amina Road, Sabon Gari, Zaria.",
+            "📍 We’re located at No. 18 Dogon Bauchi Road, Sabon Gari, Zaria.",
             "You can find us easily in Sabon Gari Market — follow the sweet smell of bread 😉",
-            "We’re right at the heart of Zaria — Amina Road, Sabon Gari."
+            "We’re right at the heart of Zaria — Dogon Bauchi Road, Sabon Gari."
         ])
 
     elif any(word in user_message for word in contact):
         reply = random.choice([
-            "📞 Call or WhatsApp us at 0814 448 5990.",
-            "You can reach us anytime at info@cinobakery.com or 0814 448 5990.",
-            "Need help? Chat with us here or call 0814 448 5990."
+            "📞 Call or WhatsApp us at 0803 260 0887.",
+            "You can reach us anytime at cinofoods@gmail.com or 0803 260 0887.",
+            "Need help? Chat with us here or call 08032600887."
         ])
 
     elif any(word in user_message for word in hours):
