@@ -2,7 +2,7 @@
 
 # 🍞 CINO Bakery & Confectionary – Full Website + Smart Chatbot (Flask)
 
-This project is a fully functional Bakery Website built using Flask featuring:
+This project is a fully functional Bakery Website built using Flask featuring
 
 * A modern multi-page website
 * A smart intent-based chatbot
