@@ -1,4 +1,4 @@
 # cino
-[**Visit cino widgets 🚀**](https://alhasasin.github.io/AI-Portfolio/)
+[**Visit cino widgets 🚀**](https://cinowidgets.onrender.com//)
 
 
