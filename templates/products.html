@@ -1,210 +1,190 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Products | CINO Bakery & Confectionary</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #fffaf3;
-      color: #333;
-    }
-
-    /* NAVBAR */
-    nav {
-      background: #d35400;
-      color: white;
-      padding: 15px 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav h1 {
-      font-size: 1.5rem;
-      letter-spacing: 1px;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-weight: 600;
-    }
-    nav ul li a:hover {
-      text-decoration: wavy;
-    }
-
-    /* HEADER */
-    header {
-      text-align: center;
-      padding: 60px 20px 20px;
-      background: #ffeccc;
-    }
-    header h2 {
-      font-size: 2.2rem;
-      color: #d35400;
-      margin-bottom: 10px;
-    }
-    header p {
-      color: #555;
-      font-size: 1.1rem;
-    }
-
-    /* PRODUCTS GRID */
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      padding: 50px;
-    }
-    .product {
-      background: #fffaf0;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: 0.3s;
-    }
-    .product:hover {
-      transform: translateY(-5px);
-    }
-    .product img {
-      width: 100%;
-      border-radius: 12px;
-      height: 200px;
-      object-fit: cover;
-    }
-    .product h3 {
-      margin: 10px 0;
-      color: #333;
-    }
-    .product p {
-      color: #777;
-      font-size: 0.9rem;
-    }
-    .product span {
-      display: block;
-      margin-top: 8px;
-      font-weight: bold;
-      color: #d35400;
-    }
-    img {
-    max-width: 100%;
-    height: auto;
-    }
-
-    .container {
-    width: 90%;
-    margin: auto;
-    }
-
-    @media (max-width: 768px) {
-        nav ul {
-          flex-direction: column;
-          text-align: center;
-        }
-        .hero-text {
-          font-size: 1.2rem;
-        }
-      }
-
-
-    /* FOOTER */
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 30px;
-    }
-
-  </style>
+  <meta name="description" content="Browse CINO Bakery & Confectionary products, from fresh breads to pastries and spices." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
-<body>
-
-  <!-- NAVBAR -->
-  <nav>
-    <h1>CINO BAKERY</h1>
-    <ul>
-      <li><a href="/">HOME</a></li>
-      <li><a href="/products">PRODUCTS</a></li>
-      <li><a href="/about">ABOUT</a></li>
-      <li><a href="/contact">CONTACT</a></li>
-    </ul>
-  </nav>
-
-  <!-- HEADER -->
-  <header>
-    <h2>Our Delicious Products</h2>
-    <p>Freshly baked daily with love — choose your favorite size and flavor.</p>
+<body id="top">
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">CINO Bakery & Confectionary</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/products">Products</a></li>
+            <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
-  <!-- PRODUCT GRID -->
-  <section class="product-grid">
-    <div class="product">
-      <img src="/static/images/bread1.png" alt="Soft Bread">
-      <h3>Soft Bread (large)</h3>
-      <p>Light, fluffy, and baked to perfection.</p>
-      <span>₦950 - ₦1000</span>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Freshly Made</p>
+      <h1>Our Delicious Products</h1>
+      <p>Freshly baked daily with love. Choose your favorite size, flavor, and spice blends.</p>
     </div>
-
-    <div class="product">
-      <img src="/static/images/bread2.png" alt="Whole Wheat Bread">
-      <h3>Small Bread</h3>
-      <p>Rich in fiber and perfect for healthy living.</p>
-      <span>₦270 - ₦300</span>
-    </div>
-
-    <div class="product">
-      <img src="/static/images/bread3.png" alt="Meat Pie">
-      <h3>Soft Bread (Jumbo)</h3>
-      <p>Golden crust with savory minced meat filling.</p>
-      <span>₦1400 - ₦1500</span>
-    </div>
-    <div class="product">
-      <img src="/static/images/bread4.png" alt="Doughnut">
-      <h3>Economic Pack</h3>
-      <p>Soft, sugary, and perfect for every occasion.</p>
-      <span>₦2000 - ₦2500</span>
-    </div>
-
-    <div class="product">
-      <img src="/static/images/curry.png" alt="curry">
-      <h3>Curry Powder</h3>
-      <p>Delicious Spices for Family at the heart.</p>
-      <span>₦500</span>
-    </div>
-
-    <div class="product">
-      <img src="/static/images/thyme.png" alt="thyme">
-      <h3>Thyme Powder</h3>
-      <p>Which can help fight acne, improve heart health, and support the immune system.</p>
-      <span>₦500</span>
-    </div>
-    <div class="product">
-      <img src="/static/images/fried_rice.png" alt="fried rice">
-      <h3>Fried Rice</h3>
-      <p>Enhanced flavor and aroma and providing health benefits.</p>
-      <span>₦400</span>
-    </div>
-
-    <div class="product">
-      <img src="/static/images/jallof_rice.png" alt="Muffin">
-      <h3>Jollof</h3>
-      <p>which help fight oxidative stress and chronic diseases.</p>
-      <span>₦300</span>
   </section>
 
-  <!-- FOOTER -->
+  <section class="section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card product-card h-100">
+            <img src="/static/images/bread1.png" class="card-img-top" alt="Soft bread" />
+            <div class="card-body">
+              <h3 class="card-title">Soft Bread (Large)</h3>
+              <p class="card-text">Light, fluffy, and baked to perfection.</p>
+              <span class="price-tag">NGN 950 - NGN 1000</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card product-card h-100">
+            <img src="/static/images/bread2.png" class="card-img-top" alt="Small bread" />
+            <div class="card-body">
+              <h3 class="card-title">Small Bread</h3>
+              <p class="card-text">Rich in fiber and perfect for healthy living.</p>
+              <span class="price-tag">NGN 270 - NGN 300</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card product-card h-100">
+            <img src="/static/images/bread3.png" class="card-img-top" alt="Jumbo bread" />
+            <div class="card-body">
+              <h3 class="card-title">Soft Bread (Jumbo)</h3>
+              <p class="card-text">Golden crust and a rich, satisfying bite.</p>
+              <span class="price-tag">NGN 1400 - NGN 1500</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card product-card h-100">
+            <img src="/static/images/bread4.png" class="card-img-top" alt="Economic pack" />
+            <div class="card-body">
+              <h3 class="card-title">Economic Pack</h3>
+              <p class="card-text">Perfect for families and gatherings.</p>
+              <span class="price-tag">NGN 2000 - NGN 2500</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card product-card h-100">
+            <img src="/static/images/curry.png" class="card-img-top" alt="Curry powder" />
+            <div class="card-body">
+              <h3 class="card-title">Curry Powder</h3>
+              <p class="card-text">A delicious spice blend for family meals.</p>
+              <span class="price-tag">NGN 500</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card product-card h-100">
+            <img src="/static/images/thyme.png" class="card-img-top" alt="Thyme powder" />
+            <div class="card-body">
+              <h3 class="card-title">Thyme Powder</h3>
+              <p class="card-text">Aromatic spice with a bold herbal flavor.</p>
+              <span class="price-tag">NGN 500</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card product-card h-100">
+            <img src="/static/images/fried_rice.png" class="card-img-top" alt="Fried rice" />
+            <div class="card-body">
+              <h3 class="card-title">Fried Rice</h3>
+              <p class="card-text">Enhanced flavor and aroma with every bite.</p>
+              <span class="price-tag">NGN 400</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card product-card h-100">
+            <img src="/static/images/jallof_rice.png" class="card-img-top" alt="Jollof rice" />
+            <div class="card-body">
+              <h3 class="card-title">Jollof Rice</h3>
+              <p class="card-text">Rich tomato flavor for a satisfying meal.</p>
+              <span class="price-tag">NGN 300</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <p>&copy; 2025 CINO Bakery & Confectionary | All rights reserved.</p>
+    <div class="container">
+      <div class="row align-items-center gy-3">
+        <div class="col-md-6">
+          <p class="mb-0">(c) 2025 CINO Bakery & Confectionary | All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="#top" class="footer-link">Back to top</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
+  <!-- FAQ Chatbot -->
+  <button class="chat-icon" onclick="toggleChat()">Chat</button>
+  <div class="chat-box" id="chatBox">
+    <div class="chat-header">CINO FAQ Bot</div>
+    <div class="chat-messages" id="chatMessages">
+      <div><strong>Bot:</strong> Hello. How can I help you today?</div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Ask about bread, cakes, etc..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <a href="https://wa.me/2348032600887?text=Hello%20CINO%20Bakery!%20I%27d%20like%20to%20make%20an%20inquiry." class="whatsapp_float" target="_blank" rel="noreferrer">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="Chat on WhatsApp" />
+  </a>
+
+  <script>
+    function toggleChat() {
+      const box = document.getElementById("chatBox");
+      box.style.display = box.style.display === "flex" ? "none" : "flex";
+    }
+    async function sendMessage() {
+      const input = document.getElementById("userInput");
+      const messages = document.getElementById("chatMessages");
+      const userMessage = input.value.trim();
+      if (!userMessage) return;
+      messages.innerHTML += `<div><strong>You:</strong> ${userMessage}</div>`;
+      input.value = "";
+      const response = await fetch("/get", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ message: userMessage })
+      });
+      const data = await response.json();
+      messages.innerHTML += `<div><strong>Bot:</strong> ${data.response}</div>`;
+      messages.scrollTop = messages.scrollHeight;
+    }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function () {
+      $(".footer-link").on("click", function (event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, 500);
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

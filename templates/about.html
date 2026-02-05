@@ -1,175 +1,163 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us | CINO Bakery & Confectionary</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #fffaf3;
-      color: #333;
-    }
-
-    /* NAVBAR */
-    nav {
-      background: #d35400;
-      color: white;
-      padding: 15px 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    nav h1 {
-      font-size: 1.5rem;
-      letter-spacing: 1px;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-weight: 600;
-    }
-    nav ul li a:hover {
-      text-decoration: wavy;
-    }
-
-    /* ABOUT SECTION */
-    .about-section {
-      padding: 60px 40px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 50px;
-      background: #ffeccc;
-    }
-    .about-image {
-      flex: 1;
-      text-align: center;
-    }
-    .about-image img {
-      width: 100%;
-      max-width: 450px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-    .about-text {
-      flex: 1;
-    }
-    .about-text h2 {
-      color: #d35400;
-      font-size: 2.2rem;
-      margin-bottom: 15px;
-    }
-    .about-text p {
-      font-size: 1.1rem;
-      color: #555;
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
-    .about-text strong {
-      color: #333;
-    }
-
-    /* MISSION & VISION */
-    .mission {
-      background: #fffaf0;
-      text-align: center;
-      padding: 60px 20px;
-    }
-    .mission h3 {
-      color: #d35400;
-      margin-bottom: 20px;
-      font-size: 1.8rem;
-    }
-    .mission p {
-      max-width: 800px;
-      margin: 0 auto 30px;
-      color: #555;
-      font-size: 1rem;
-      line-height: 1.6;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .container {
-      width: 90%;
-      margin: auto;
-    }
-
-    @media (max-width: 768px) {
-    nav ul {
-    flex-direction: column;
-    text-align: center;
-    }
-    .hero-text {
-      font-size: 1.2rem;
-    }
-    }
-
-
-    /* FOOTER */
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 30px;
-    }
-  </style>
+  <meta name="description" content="Learn about CINO Bakery & Confectionary, our story, mission, and commitment to fresh baking in Zaria." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 </head>
-<body>
+<body id="top">
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="/">CINO Bakery & Confectionary</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="/products">Products</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-  <!-- NAVBAR -->
-  <nav>
-    <h1>CINO BAKERY</h1>
-    <ul>
-      <li><a href="/">HOME</a></li>
-      <li><a href="/products">PRODUCTS</a></li>
-      <li><a href="/about">ABOUT</a></li>
-      <li><a href="/contact">CONTACT</a></li>
-    </ul>
-  </nav>
-
-  <!-- ABOUT SECTION -->
-  <section class="about-section">
-    <div class="about-image">
-      <img src="/static/images/company.png" alt="CINO Bakery Team">
-    </div>
-    <div class="about-text">
-      <h2>Our Story</h2>
-      <p>
-        <strong>CINO Bakery & Confectionary</strong> was founded with one simple goal — to bring smiles to every home through fresh, warm, and delicious baked goods. 
-        From our humble beginnings in <strong>Zaria</strong>, we’ve grown into a trusted local favorite for families, students, and bread lovers.
-      </p>
-      <p>
-        Every loaf we bake and every snack we make is crafted with passion, using quality ingredients and time-tested recipes.
-        We pride ourselves on combining traditional baking techniques with modern innovation to create irresistible tastes.
-      </p>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Our Story</p>
+      <h1>About CINO Bakery & Confectionary</h1>
+      <p>We bake fresh daily with care, serving families, students, and businesses across Zaria.</p>
     </div>
   </section>
 
-  <!-- MISSION AND VISION -->
-  <section class="mission">
-    <h3>Our Mission</h3>
-    <p>To deliver fresh, healthy, and affordable baked goods that make every customer’s day a little sweeter.</p>
-
-    <h3>Our Vision</h3>
-    <p>To become the most loved bakery in Nigeria, known for quality, consistency, and community connection.</p>
+  <section class="section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <img class="img-fluid rounded-4 shadow" src="{{ url_for('static', filename='images/company.png') }}" alt="CINO Bakery team" />
+        </div>
+        <div class="col-lg-6">
+          <h2 class="section-title text-start">From a small oven to a city favorite</h2>
+          <p>At <strong>CINO Bakery & Confectionary</strong>, we started with a simple goal: to deliver warm, delicious baked goods that brighten everyday life. From our humble beginnings in Zaria, we have grown into a trusted local favorite.</p>
+          <p>Every loaf and snack is crafted with care using quality ingredients and time-tested recipes. We blend traditional baking with modern innovation to create consistent taste and freshness.</p>
+          <div class="row g-3 mt-4">
+            <div class="col-sm-6">
+              <div class="feature-card">
+                <h4>Daily Freshness</h4>
+                <p>Fresh batches every morning for the best taste.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="feature-card">
+                <h4>Quality First</h4>
+                <p>Carefully sourced ingredients in every recipe.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="feature-card">
+                <h4>Community Roots</h4>
+                <p>Proudly serving Zaria and surrounding areas.</p>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="feature-card">
+                <h4>Reliable Service</h4>
+                <p>Consistent delivery and friendly support.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- FOOTER -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="info-card h-100">
+            <h3>Our Mission</h3>
+            <p>To deliver fresh, healthy, and affordable baked goods that make every customer day a little sweeter.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="info-card h-100">
+            <h3>Our Vision</h3>
+            <p>To become the most loved bakery in Nigeria, known for quality, consistency, and community connection.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <p>&copy; 2025 CINO Bakery & Confectionary | All rights reserved.</p>
+    <div class="container">
+      <div class="row align-items-center gy-3">
+        <div class="col-md-6">
+          <p class="mb-0">(c) 2025 CINO Bakery & Confectionary | All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="#top" class="footer-link">Back to top</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
+  <!-- FAQ Chatbot -->
+  <button class="chat-icon" onclick="toggleChat()">Chat</button>
+  <div class="chat-box" id="chatBox">
+    <div class="chat-header">CINO FAQ Bot</div>
+    <div class="chat-messages" id="chatMessages">
+      <div><strong>Bot:</strong> Hello. How can I help you today?</div>
+    </div>
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Ask about bread, cakes, etc..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <a href="https://wa.me/2348032600887?text=Hello%20CINO%20Bakery!%20I%27d%20like%20to%20make%20an%20inquiry." class="whatsapp_float" target="_blank" rel="noreferrer">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="Chat on WhatsApp" />
+  </a>
+
+  <script>
+    function toggleChat() {
+      const box = document.getElementById("chatBox");
+      box.style.display = box.style.display === "flex" ? "none" : "flex";
+    }
+    async function sendMessage() {
+      const input = document.getElementById("userInput");
+      const messages = document.getElementById("chatMessages");
+      const userMessage = input.value.trim();
+      if (!userMessage) return;
+      messages.innerHTML += `<div><strong>You:</strong> ${userMessage}</div>`;
+      input.value = "";
+      const response = await fetch("/get", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ message: userMessage })
+      });
+      const data = await response.json();
+      messages.innerHTML += `<div><strong>Bot:</strong> ${data.response}</div>`;
+      messages.scrollTop = messages.scrollHeight;
+    }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function () {
+      $(".footer-link").on("click", function (event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, 500);
+      });
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
